@@ -3,94 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>About Us - Krishika Foods and Pickles</title>
     <style>
-        .hero {
-            background-image: url('https://via.placeholder.com/1200x400');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 0;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
-        .team-member {
+        .navbar {
+            background-color: #ff5722;
+            padding: 10px;
             text-align: center;
-            margin-bottom: 30px;
         }
-        .team-member img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .navbar a:hover {
+            background-color: #e64a19;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            color: #ff5722;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .section {
+            margin-top: 20px;
+            padding: 20px 0;
+        }
+        .section h2 {
+            color: #ff5722;
+        }
+        .image-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ff5722;
+            color: white;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Krishika Home Foods and Pickles</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./Home.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contact.html">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./Review.html">Reviews</a>
-                    </li>
-                </ul>
-            </div>
+    <div class="navbar">
+        <a href="Home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="Review.html">Reviews</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Krishika Foods and Pickles</h1>
+        </header>
+
+        <!-- Image Section -->
+        <div class="image-section">
+            <img src="./puru.png" alt="Our Products">
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <div class="hero text-center">
-        <h1>About Us</h1>
-        <p>We are dedicated to delivering the best service for our customers.</p>
-    </div>
+        <!-- Our Story Section -->
+        <div class="section">
+            <h2>Our Story</h2>
+            <p>Welcome to Krishika Foods and Pickles. I am a 50-year-old entrepreneur from Nellore, Andhra Pradesh, and my daughter, Krishika, is the inspiration behind this venture. We specialize in bringing you the authentic taste of homemade foods and pickles, both vegetarian and non-vegetarian, with the love and care of home-cooked meals.</p>
+        </div>
 
-    <!-- Our Mission -->
-    <div class="container my-5">
-        <h2 class="text-center mb-4">Our Mission</h2>
-        <p class="text-center">To provide top-notch services and exceed our customers' expectations.</p>
-    </div>
-
-    <!-- Team Section -->
-    <div class="container my-5">
-        <h2 class="text-center mb-4">Meet Our Team</h2>
-        <div class="row">
-            <div class="col-md-4 team-member">
-                <img src="https://via.placeholder.com/150" alt="Team Member 1">
-                <h4>John Doe</h4>
-                <p>CEO</p>
-            </div>
-            <div class="col-md-4 team-member">
-                <img src="https://via.placeholder.com/150" alt="Team Member 2">
-                <h4>Jane Smith</h4>
-                <p>CTO</p>
-            </div>
-            <div class="col-md-4 team-member">
-                <img src="https://via.placeholder.com/150" alt="Team Member 3">
-                <h4>Michael Brown</h4>
-                <p>CFO</p>
-            </div>
+        <!-- Our Mission Section -->
+        <div class="section">
+            <h2>Our Mission</h2>
+            <p>To deliver fresh, homemade pickles and food to your doorstep, ensuring the best quality, taste, and traditional flavors. We strive to bring the taste of Andhra to every home, maintaining authenticity and excellence.</p>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-light text-center py-4">
-        <p>&copy; 2024 Company Name. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2024 Krishika Foods and Pickles. All rights reserved.</p>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
