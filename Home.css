@@ -1,0 +1,159 @@
+  /* Full height layout */
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /*background-image: url('DSRR.jpeg');  Update the path */
+    background-color: rgb(0, 255, 115);
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
+  /* Main content should take full space */
+  .container {
+      flex-grow: 1;
+  }
+
+  /* Footer styling */
+  footer {
+      background-color: #929fba;
+  }
+
+  /* Image styling with border */
+  .product-card {
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 10px;
+      margin: 10px 0;
+      text-align: center;
+      position: relative;
+  }
+
+  .product-card img {
+      max-width: 200px;
+      height: 200px;
+      border-radius: 10px;
+  }
+
+  /* Price styling */
+  .product-price {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 16px;
+  }
+
+  /* Buy Now button */
+  .btn-buy {
+      margin-top: 10px;
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+  }
+
+  .btn-buy:hover {
+      background-color: #ff453a;
+      
+  }
+  a img {
+    background-color: transparent; /* Removes any white background */
+    display: flex;
+    flex-direction: ;
+    border-radius: 50%; /* Circular appearance */
+    width: 30px; /* Adjust the width if necessary */
+    height: 30px; /* Set height to ensure equal proportions */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for better appearance */
+}
+
+a img:hover {
+    transform: scale(1.1); /* Optional: Scales the image slightly on hover */
+    transition: transform 0.2s ease-in-out; /* Smooth transition */
+}
+
+  /* Ticker/Slider styling */
+  .ticker-wrapper {
+    background-color: rgb(96, 96, 189);
+    color:white;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ticker {
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker-move 15s linear infinite;
+}
+
+@keyframes ticker-move {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+    /* Navbar background color */
+    .navbar {
+      background-color: #4a90e2; /* Change to your desired color */
+  }
+
+  /* Navbar text color */
+  .navbar-nav .nav-link {
+      color:#ffcc00; /* Change to your desired text color */
+  }
+
+  /* Active link color */
+  .navbar-nav .nav-link.active {
+      color: #ffcc00; /* Change to your desired active link color */
+      font-weight: bold; /* Optional: Make the active link bold */
+  }
+
+  /* Disabled link color */
+  .navbar-nav .nav-link.disabled {
+      color: #ffcc00; /* Change to your desired disabled link color */
+  }
+
+  /* Navbar link hover effect */
+  .navbar-nav .nav-link:hover {
+      color: #ffcc00; /* Change to your desired hover color */
+  }
+
+  /* Toggler icon color */
+  .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.5); /* Change to your desired toggler border color */
+  }
+  .navbar-toggler-icon {
+      background-color:#ffcc00; /* Change to your desired toggler icon color */
+  }
+  .btn-buy {
+    display: inline-block; /* Ensure it behaves like a block element */
+    padding: 10px 20px; /* Adjust padding */
+    background-color: #28a745; /* Green background color */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.btn-buy:hover {
+    background-color: #218838; /* Darker green on hover */
+}
