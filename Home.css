@@ -4,6 +4,7 @@
     margin: 0;
     display: flex;
     flex-direction: column;
+    background-image: url("./back.jpeg");
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
 }
