@@ -65,6 +65,62 @@ app.post('/submit-review', upload.single('reviewImage'), (req, res) => {
     });
 });
 
+
+
+app.post('/submit-contact', (req, res) => {
+    const contactData = req.body;
+
+    // Read existing contacts from the file
+    fs.readFile(path.join(__dirname, 'contact.json'), 'utf-8', (err, data) => {
+        if (err) {
+            return res.status(500).json({ message: 'Error reading contact file.' });
+        }
+
+        let contacts = [];
+        if (data) {
+            contacts = JSON.parse(data);
+        }
+
+        // Add new contact to the array
+        contacts.push(contactData);
+
+        // Write updated contacts back to the file
+        fs.writeFile(path.join(__dirname, 'contact.json'), JSON.stringify(contacts, null, 2), (err) => {
+            if (err) {
+                return res.status(500).json({ message: 'Error saving contact details.' });
+            }
+            res.json({ message: 'Contact details submitted successfully!' });
+        });
+    });
+});
+
+// Endpoint to submit an order
+app.post('/api/orders', (req, res) => {
+    const newOrder = req.body; // Get the order data from the request
+
+    // Read existing orders from orders.json
+    fs.readFile(path.join(__dirname, 'orders.json'), 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).send('Error reading orders file');
+        }
+
+        let orders = [];
+        if (data) {
+            orders = JSON.parse(data); // Parse existing orders
+        }
+
+        orders.push(newOrder); // Add the new order to the list
+
+        // Write updated orders back to orders.json
+        fs.writeFile(path.join(__dirname, 'orders.json'), JSON.stringify(orders, null, 2), (err) => {
+            if (err) {
+                return res.status(500).send('Error saving order');
+            }
+            res.send('Order placed successfully!'); // Send success response
+        });
+    });
+});
+
 // Endpoint to get all reviews
 app.get('/reviews.json', (req, res) => {
     fs.readFile(path.join(__dirname, 'reviews.json'), 'utf-8', (err, data) => {
